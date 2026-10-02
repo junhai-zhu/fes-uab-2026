@@ -13,4 +13,4 @@ print(type("Hola món"))
 
 # Exercici 3
 # Imprimeix el tipus del resultat de la comparació 10 > 5
-print
+print(type(10 > 5))
