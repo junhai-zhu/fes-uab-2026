@@ -151,15 +151,45 @@ es_fin_de_semana = False
 # Ejercicio 1: Determinar el mayor de dos números
 # Pide al usuario que introduzca dos números y muestra un mensaje
 # indicando cuál es mayor o si son iguales
+numero1 = float(input("Introduce el primer número: "))
+numero2 = float(input("Introduce el segundo número: "))
 
+if numero1 > numero2:
+    print("El primer número es mayor.")
+elif numero2 > numero1:
+    print("El segundo número es mayor.")
+else:
+    print("Los dos números son iguales.")
 
 # Ejercicio 2: Calculadora simple
 # Pide al usuario dos números y una operación (+, -, *, /)
 # Realiza la operación y muestra el resultado (maneja la división entre zero)
+numero1 = float(input("Introduce el primer número: "))
+numero2 = float(input("Introduce el segundo número: "))
+operacion = input("Introduce la operación (+, -, *, /): ")
+
+if operacion == "+":
+    resultado = numero1 + numero2
+elif operacion == "-":
+    resultado = numero1 - numero2
+elif operacion == "*":
+    resultado = numero1 * numero2
+elif operacion == "/":
+    if numero2 != 0:
+        resultado = numero1 / numero2
+    else:
+        print("Error: División entre cero.")
+        resultado = None
+
+if resultado is not None:
+    print(f"El resultado de {numero1} {operacion} {numero2} es: {resultado}")
 
 # Ejercicio 3: Año bisiesto
 # Pide al usuario que introduzca un año y determina si es bisiesto.
 # Un año es bisiesto si es divisible por 4, excepto si es divisible por 100 pero no por 400.
+año = int(input("Introduce un año: "))
+if (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0):
+    print(f"El año {año} es bisiesto.")
 
 # Ejercicio 4: Categorizar edades
 # Pide al usuario que introduzca una edad y la clasifique en:
@@ -168,3 +198,14 @@ es_fin_de_semana = False
 # - Adolescente (13-17 años)
 # - Adulto (18-64 años)
 # - Adulto mayor (65 años o más)
+edad = int(input("Introduce una edad: "))
+if 0 <= edad <= 2:
+    print("Bebé")
+elif 3 <= edad <= 12:
+    print("Niño")
+elif 13 <= edad <= 17:
+    print("Adolescente")
+elif 18 <= edad <= 64:
+    print("Adulto")
+else:
+    print("Adulto mayor") 
