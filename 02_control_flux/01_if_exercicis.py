@@ -2,7 +2,28 @@
 # EXERCICIS
 ###
 
-# Exercici 1: Qualitat del senyal Wi-Fi
+# Exercici 1: Determinar el més gran de dos nombres
+# Demana a l'usuari que introdueixi dos nombres i mostra un missatge
+# que indiqui quin és més gran o si són iguals.
+
+# Exercici 2: Calculadora senzilla
+# Demana a l'usuari dos nombres i una operació (+, -, *, /).
+# Fes l'operació i mostra'n el resultat (gestiona la divisió per zero).
+
+# Exercici 3: Any de traspàs
+# Demana a l'usuari que introdueixi un any i determina si és de traspàs.
+# Un any és de traspàs si és divisible per 4, excepte si és divisible per 100
+# però no per 400.
+
+# Exercici 4: Classificar edats
+# Demana a l'usuari que introdueixi una edat i classifica-la en:
+# - Nadó (0-2 anys)
+# - Infant (3-12 anys)
+# - Adolescent (13-17 anys)
+# - Adult (18-64 anys)
+# - Persona gran (65 anys o més)
+
+# Exercici 5: Qualitat del senyal Wi-Fi
 # Demana el nivell de senyal rebut (RSSI) en dBm i classifica la cobertura:
 # - -50 dBm o superior: excel·lent
 # - Entre -67 dBm i menys de -50 dBm: bona
@@ -18,8 +39,7 @@ elif senyal >= -75:
 else:
     print("Cobertura molt feble.")
 
-
-# Exercici 2: Nivell de recepció d'una connexió de fibra òptica
+# Exercici 6: Nivell de recepció d'una connexió de fibra òptica
 # Demana la potència òptica rebuda en dBm. Per a aquest exercici, considera
 # acceptable un nivell entre -27 dBm i -8 dBm, ambdós inclosos.
 # Indica si el nivell és massa baix, acceptable o massa alt.
@@ -31,7 +51,7 @@ elif potencia <= -8:
 else:
     print("Nivell massa alt.")
 
-# Exercici 3: Consum mensual de dades mòbils
+# Exercici 7: Consum mensual de dades mòbils
 # Demana el consum de dades en GB d'una línia mòbil. El pla inclou 20 GB.
 # Indica si el consum és dins del límit o si l'ha superat; en aquest últim cas,
 # calcula quants GB addicionals s'han consumit.
@@ -42,7 +62,7 @@ else:
     addicionals = consum - 20
     print(f"Consum superat. GB addicionals: {addicionals}")
 
-# Exercici 4: Diagnòstic d'una connexió de fibra
+# Exercici 8: Diagnòstic d'una connexió de fibra
 # Demana si l'indicador LOS del terminal òptic està encès i si l'indicador
 # d'Internet del router està encès. Segons aquestes dues dades, indica si cal
 # revisar el cable de fibra, comprovar el servei del proveïdor o si la connexió
@@ -56,7 +76,7 @@ elif los and not internet:
 else:
     print("Cal comprovar el servei del proveïdor.")
 
-# Exercici 5: Bateria d'un sistema d'alimentació ininterrompuda (SAI)
+# Exercici 9: Bateria d'un sistema d'alimentació ininterrompuda (SAI)
 # Demana el percentatge de bateria disponible al SAI que alimenta un armari
 # de comunicacions. Indica si el nivell és crític (menys del 20 %), baix
 # (del 20 % al 49 %) o suficient (50 % o més). Rebutja valors fora del rang
@@ -71,7 +91,7 @@ elif bateria < 50:
 else:
     print("Nivell de bateria suficient.")
 
-# Exercici 6: Qualitat d'una connexió de xarxa
+# Exercici 10: Qualitat d'una connexió de xarxa
 # Demana la latència en mil·lisegons i el percentatge de paquets perduts.
 # Rebutja una latència negativa o una pèrdua fora del rang del 0 % al 100 %.
 # Classifica la connexió com a excel·lent si la latència és de 30 ms o menys
@@ -93,7 +113,7 @@ elif latencia <= 150 and perdues <= 5:
 else:
     print("Connexió deficient.")
 
-# Exercici 7: Cost mensual d'un pla de dades
+# Exercici 11: Cost mensual d'un pla de dades
 # Demana el tipus de pla (bàsic o plus) i el consum mensual en GB.
 # El pla bàsic costa 10 € i inclou 10 GB; cada GB addicional costa 1,50 €.
 # El pla plus costa 20 € i inclou 30 GB; cada GB addicional costa 0,75 €.
@@ -112,7 +132,7 @@ elif tipus_pla == "plus":
 else:
     print("Tipus de pla desconegut.")
 
-# Exercici 8: Accés a un compte de client
+# Exercici 12: Accés a un compte de client
 # Demana si el compte està actiu, si la contrasenya és correcta i si el codi
 # de doble verificació és correcte. Demana el codi només si el compte és actiu
 # i la contrasenya és correcta. Indica si l'accés es denega perquè el compte
@@ -131,7 +151,7 @@ else:
     else:
         print("Accés denegat: codi incorrecte.")
 
-# Exercici 9: Diagnòstic d'un router
+# Exercici 13: Diagnòstic d'un router
 # Demana si el router està encès, si l'indicador LOS del terminal òptic està
 # encès i si l'indicador d'Internet del router està encès. Indica primer si
 # cal encendre el router; si ja està encès, comprova si cal revisar el cable
@@ -149,7 +169,7 @@ elif not internet_actiu:
 else:
     print("La connexió funciona correctament.")
 
-# Exercici 10: Prioritat d'una incidència de xarxa
+# Exercici 14: Prioritat d'una incidència de xarxa
 # Demana si la incidència afecta un servei crític, el nombre d'usuaris afectats
 # i si hi ha una alternativa de connexió disponible. Rebutja un nombre negatiu
 # d'usuaris. Assigna prioritat crítica si afecta un servei crític i no hi ha

@@ -1,10 +1,8 @@
 ###
-# EXERCICIS
+# SOLUCIONS
 ###
 
 # Exercici 1: Determinar el més gran de dos nombres
-# Demana a l'usuari que introdueixi dos nombres i mostra un missatge
-# que indiqui quin és més gran o si són iguals.
 print("\nExercici 1:")
 num1 = int(input("Introdueix el primer nombre: "))
 num2 = int(input("Introdueix el segon nombre: "))
@@ -17,49 +15,38 @@ else:
     print("Els nombres són iguals")
 
 # Exercici 2: Calculadora senzilla
-# Demana a l'usuari dos nombres i una operació (+, -, *, /).
-# Fes l'operació i mostra'n el resultat (gestiona la divisió per zero).
 print("\nExercici 2:")
 num1 = float(input("Introdueix el primer nombre: "))
 num2 = float(input("Introdueix el segon nombre: "))
-operacio = input("Introdueix l'operació (+, -, *, /): ")
+operacio = input("Introdueix l'operació (+, -, *, /): ").strip()
 
-if operacio == "+":
+if operacio == "/" and num2 == 0:
+    print("Error: no es pot dividir per zero.")
+elif operacio == "+":
     resultat = num1 + num2
+    print(f"El resultat és: {resultat}")
 elif operacio == "-":
     resultat = num1 - num2
+    print(f"El resultat és: {resultat}")
 elif operacio == "*":
     resultat = num1 * num2
+    print(f"El resultat és: {resultat}")
 elif operacio == "/":
-    if num2 == 0:
-        print("Error: no es pot dividir per zero.")
-    else:
-        resultat = num1 / num2
+    resultat = num1 / num2
+    print(f"El resultat és: {resultat}")
 else:
     print("Operació no vàlida.")
 
-if 'resultat' in locals(): # Comprova si existeix la variable resultat.
-    print(f"El resultat és: {resultat}")
-
 # Exercici 3: Any de traspàs
-# Demana a l'usuari que introdueixi un any i determina si és de traspàs.
-# Un any és de traspàs si és divisible per 4, excepte si és divisible per 100
-# però no per 400.
 print("\nExercici 3:")
-any = int(input("Introdueix un any: "))
+any_triat = int(input("Introdueix un any: "))
 
-if (any % 4 == 0 and any % 100 != 0) or any % 400 == 0:
-    print(f"{any} és un any de traspàs.")
+if (any_triat % 4 == 0 and any_triat % 100 != 0) or any_triat % 400 == 0:
+    print(f"{any_triat} és un any de traspàs.")
 else:
-    print(f"{any} no és un any de traspàs.")
+    print(f"{any_triat} no és un any de traspàs.")
 
 # Exercici 4: Classificar edats
-# Demana a l'usuari que introdueixi una edat i classifica-la en:
-# - Nadó (0-2 anys)
-# - Infant (3-12 anys)
-# - Adolescent (13-17 anys)
-# - Adult (18-64 anys)
-# - Persona gran (65 anys o més)
 print("\nExercici 4:")
 edat = int(input("Introdueix una edat: "))
 
@@ -76,9 +63,67 @@ elif edat >= 65:
 else:
     print("Edat no vàlida.")
 
-# Exercici 6: Qualitat d'una connexió de xarxa
-# Demana la latència i el percentatge de paquets perduts i classifica la connexió.
+# Exercici 5: Qualitat del senyal Wi-Fi
+print("\nExercici 5:")
+rssi = float(input("Introdueix el nivell de senyal RSSI en dBm: "))
+
+if rssi >= -50:
+    print("Cobertura excel·lent.")
+elif rssi >= -67:
+    print("Cobertura bona.")
+elif rssi >= -75:
+    print("Cobertura feble.")
+else:
+    print("Cobertura molt feble.")
+
+# Exercici 6: Nivell de recepció d'una connexió de fibra òptica
 print("\nExercici 6:")
+potencia = float(input("Introdueix la potència òptica rebuda en dBm: "))
+
+if potencia < -27:
+    print("El nivell és massa baix.")
+elif potencia <= -8:
+    print("El nivell és acceptable.")
+else:
+    print("El nivell és massa alt.")
+
+# Exercici 7: Consum mensual de dades mòbils
+print("\nExercici 7:")
+consum_gb = float(input("Introdueix el consum mensual de dades en GB: "))
+
+if consum_gb <= 20:
+    print("El consum està dins del límit de 20 GB.")
+else:
+    extra_gb = consum_gb - 20
+    print(f"S'ha superat el límit en {extra_gb:.2f} GB.")
+
+# Exercici 8: Diagnòstic d'una connexió de fibra
+print("\nExercici 8:")
+los_encès = input("L'indicador LOS està encès? (s/n): ").strip().lower()
+internet_encès = input("L'indicador d'Internet està encès? (s/n): ").strip().lower()
+
+if los_encès == "s":
+    print("Cal revisar el cable de fibra.")
+elif internet_encès != "s":
+    print("Cal comprovar el servei del proveïdor.")
+else:
+    print("La connexió sembla funcionar correctament.")
+
+# Exercici 9: Bateria d'un sistema d'alimentació ininterrompuda (SAI)
+print("\nExercici 9:")
+bateria = float(input("Introdueix el percentatge de bateria del SAI: "))
+
+if bateria < 0 or bateria > 100:
+    print("El percentatge ha d'estar entre el 0 % i el 100 %.")
+elif bateria < 20:
+    print("Nivell de bateria crític.")
+elif bateria < 50:
+    print("Nivell de bateria baix.")
+else:
+    print("Nivell de bateria suficient.")
+
+# Exercici 10: Qualitat d'una connexió de xarxa
+print("\nExercici 10:")
 latencia = float(input("Introdueix la latència en ms: "))
 perdua = float(input("Introdueix el percentatge de paquets perduts: "))
 
@@ -95,9 +140,8 @@ elif latencia <= 150 and perdua <= 5:
 else:
     print("La connexió és deficient.")
 
-# Exercici 7: Cost mensual d'un pla de dades
-# Calcula el preu del pla i, si escau, el cost dels GB addicionals.
-print("\nExercici 7:")
+# Exercici 11: Cost mensual d'un pla de dades
+print("\nExercici 11:")
 pla = input("Introdueix el tipus de pla (bàsic o plus): ").strip().lower()
 consum = float(input("Introdueix el consum mensual en GB: "))
 
@@ -116,9 +160,8 @@ elif pla == "plus":
 else:
     print("Tipus de pla no vàlid.")
 
-# Exercici 8: Accés a un compte de client
-# Comprova l'estat del compte, la contrasenya i, si cal, el codi de doble verificació.
-print("\nExercici 8:")
+# Exercici 12: Accés a un compte de client
+print("\nExercici 12:")
 compte_actiu = input("El compte està actiu? (s/n): ").strip().lower()
 contrasenya_correcta = input("La contrasenya és correcta? (s/n): ").strip().lower()
 
@@ -133,9 +176,8 @@ else:
     else:
         print("Accés denegat: el codi de doble verificació és incorrecte.")
 
-# Exercici 9: Diagnòstic d'un router
-# Comprova el router i els indicadors en l'ordre indicat.
-print("\nExercici 9:")
+# Exercici 13: Diagnòstic d'un router
+print("\nExercici 13:")
 router_encès = input("El router està encès? (s/n): ").strip().lower()
 
 if router_encès != "s":
@@ -151,9 +193,8 @@ else:
     else:
         print("La connexió funciona correctament.")
 
-# Exercici 10: Prioritat d'una incidència de xarxa
-# Assigna la prioritat segons la criticitat, els usuaris afectats i l'alternativa.
-print("\nExercici 10:")
+# Exercici 14: Prioritat d'una incidència de xarxa
+print("\nExercici 14:")
 servei_critic = input("La incidència afecta un servei crític? (s/n): ").strip().lower()
 usuaris = int(input("Quants usuaris estan afectats? "))
 

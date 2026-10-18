@@ -142,7 +142,7 @@ missatge = "És major d'edat" if edat >= 18 else "És menor d'edat"
 print(missatge)
 
 ###
-# EXERCICIS
+# EXERCISIS
 ###
 
 # Ejercicio 1: Determinar el mayor de dos números
