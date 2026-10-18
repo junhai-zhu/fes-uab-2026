@@ -5,15 +5,49 @@
 # Exercici 1: Determinar el més gran de dos nombres
 # Demana a l'usuari que introdueixi dos nombres i mostra un missatge
 # que indiqui quin és més gran o si són iguals.
+num1 = int(input("Introdueix el primer nombre: "))
+num2 = int(input("Introdueix el segon nombre: "))
+if num1 > num2:
+    print("El primer nombre és més gran.")
+elif num2 > num1:
+    print("El segon nombre és més gran.")
+else:
+    print("Els dos nombres són iguals.")
 
 # Exercici 2: Calculadora senzilla
 # Demana a l'usuari dos nombres i una operació (+, -, *, /).
 # Fes l'operació i mostra'n el resultat (gestiona la divisió per zero).
+num1 = float(input("Introdueix el primer nombre: "))
+num2 = float(input("Introdueix el segon nombre: "))
+operacio = input("Introdueix l'operació (+, -, *, /): ")
+
+if operacio == "+":
+    resultat = num1 + num2
+elif operacio == "-":
+    resultat = num1 - num2
+elif operacio == "*":
+    resultat = num1 * num2
+elif operacio == "/":
+    if num2 != 0:
+        resultat = num1 / num2
+    else:
+        print("Error: Divisió per zero.")
+        exit()
+else:
+    print("Error: Operació no vàlida.")
+    exit()
+
+print(f"El resultat de {num1} {operacio} {num2} és {resultat}.")
 
 # Exercici 3: Any de traspàs
 # Demana a l'usuari que introdueixi un any i determina si és de traspàs.
 # Un any és de traspàs si és divisible per 4, excepte si és divisible per 100
 # però no per 400.
+any = int (input("Introdueix un any: "))
+if (any % 4 == 0 and (any % 100 != 0 or any % 400 == 0)):
+    print(f"{any} es un any de traspàs.")
+else:
+    print(f"{any} no es un any de traspàs.")
 
 # Exercici 4: Classificar edats
 # Demana a l'usuari que introdueixi una edat i classifica-la en:
@@ -22,6 +56,17 @@
 # - Adolescent (13-17 anys)
 # - Adult (18-64 anys)
 # - Persona gran (65 anys o més)
+edat = int(input("Introdueix l'edat: "))
+if edat >= 0 and edat <= 2:
+    print("Nado.")
+elif edat >= 3 and edat <= 12:
+    print("Infant.")
+elif edat >= 13 and edat <= 17:
+    print("Adolescent.")
+elif edat >= 18 and edat <= 64:
+    print("Adult.")
+else:
+    print("Persona gran.")
 
 # Exercici 5: Qualitat del senyal Wi-Fi
 # Demana el nivell de senyal rebut (RSSI) en dBm i classifica la cobertura:
