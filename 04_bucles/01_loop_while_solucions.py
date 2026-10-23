@@ -20,6 +20,73 @@ while numero <= 20:
     suma_parells += numero
   numero += 1
 
+# Exercici 7: Suma fins al zero
+# Demana a l'usuari que introdueixi números enters.
+# Ves sumant els números introduïts fins que l'usuari introdueixi el 0.
+# Al final, imprimeix la suma total. El 0 només serveix per acabar i no s'ha de sumar.
+print("\nExercici 7:")
+
+suma = 0
+numero = int(input("Introdueix un número enter (0 per acabar): "))
+
+while numero != 0:
+  suma += numero
+  numero = int(input("Introdueix un altre número enter (0 per acabar): "))
+
+print(f"La suma total és: {suma}")
+
+# Exercici 8: Comptar les xifres d'un número
+# Demana a l'usuari que introdueixi un número enter positiu.
+# Comptabilitza quantes xifres té fent servir un bucle while.
+# Finalment, imprimeix el nombre de xifres.
+print("\nExercici 8:")
+
+numero = int(input("Introdueix un número enter positiu: "))
+comptador = 0
+
+while numero > 0:
+  numero //= 10
+  comptador += 1
+
+print(f"El número té {comptador} xifres.")
+
+# Exercici 9: Seqüència de Fibonacci
+# Demana a l'usuari quants termes de la seqüència de Fibonacci vol veure.
+# Imprimeix aquest nombre de termes fent servir un bucle while.
+# La seqüència comença per 0 i 1; cada terme següent és la suma dels dos anteriors.
+print("\nExercici 9:")
+
+termes = int(input("Quants termes de Fibonacci vols veure? "))
+anterior = 0
+actual = 1
+comptador = 0
+
+while comptador < termes:
+  print(anterior)
+  seguent = anterior + actual
+  anterior = actual
+  actual = seguent
+  comptador += 1
+
+# Exercici 10: Joc d'endevinar el número
+# El número secret és el 7.
+# Demana a l'usuari que provi d'endevinar-lo i continua demanant números amb un bucle while
+# fins que l'encerti.
+# Després de cada intent incorrecte, indica si el número secret és més gran o més petit.
+print("\nExercici 10:")
+
+numero_secret = 7
+intent = int(input("Endevina el número secret: "))
+
+while intent != numero_secret:
+  if intent < numero_secret:
+    print("El número secret és més gran.")
+  else:
+    print("El número secret és més petit.")
+  intent = int(input("Torna-ho a provar: "))
+
+print("Correcte! Has endevinat el número.")
+
 print(f"La suma dels números parells fins a 20 és: {suma_parells}")
 
 # Exercici 3: Factorial d'un número

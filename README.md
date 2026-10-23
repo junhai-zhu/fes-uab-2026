@@ -1,124 +1,63 @@
 # Fonaments d'Enginyeria de Software amb Python
 
-Repositori de materials de l'assignatura **Fonaments d'Enginyeria de Software (FES)** de la Universitat Autònoma de Barcelona, curs acadèmic **2026–2027**.
+Materials docents de l'assignatura **Fonaments d'Enginyeria de Software (FES)** de la Universitat Autònoma de Barcelona (**UAB**), curs acadèmic **2026–2027** (Graus d'Enginyeria d'Electrònica de Telecomunicacions i de Sistemes de Telecomunicacions).
 
-El material està pensat per a l'alumnat del **Grau d'Enginyeria d'Electrònica de Telecomunicacions** i del **Grau d'Enginyeria de Sistemes de Telecomunicacions**. Mitjançant exemples i exercicis en Python, s'hi treballen els fonaments de la programació i la construcció progressiva de solucions de programari.
+---
 
-> Aquest repositori és un material docent en evolució. Els continguts disponibles i l'organització dels exercicis poden créixer o canviar durant el curs.
+## Estructura i convenció de fitxers
 
-## Com fer servir aquest repositori
+Els continguts s'organitzen en carpetes temàtiques numerades seguint una progressió lògica d'aprenentatge. Per a cada tema es troba:
 
-Els materials s'organitzen en carpetes numerades que indiquen un **ordre recomanat d'aprenentatge**. Dins de cada carpeta, els fitxers principals presenten exemples i conceptes; quan hi ha fitxers d'exercicis i solucions, segueixen aquests exemples.
+- `NN_tema.py`: Explicacions i exemples de codi executables.
+- `NN_tema.ipynb`: Versió interactiva en format Jupyter Notebook.
+- `NN_tema_exercicis.py`: Enunciats d'exercicis pràctics.
+- `NN_tema_solucions.py`: Propostes de resolució dels exercicis.
 
-Un cicle d'estudi recomanat:
-
-1. Llegeix i executa el fitxer principal del tema.
-2. Modifica els exemples: canvia les dades, prediu el resultat i comprova'l.
-3. Fes els exercicis sense consultar les solucions.
-4. Executa el teu codi amb diversos casos, inclosos els casos límit.
-5. Compara'l amb les solucions i assegura't d'entendre'n les diferències.
-
-Les solucions són una possible manera de resoldre cada exercici; no necessàriament l'única.
-
-## Requisits i execució
-
-Cal tenir Python instal·lat. Per comprovar-ho, obre un terminal:
-
-```powershell
-py --version
-```
-
-En alguns sistemes també es pot fer servir:
-
-```bash
-python --version
-```
-
-Executa les ordres des de la carpeta arrel del repositori. Per exemple, a Windows:
-
-```powershell
-py .\01_basic\01_print.py
-```
-
-O bé, si `python` és la comanda disponible:
-
-```bash
-python ./01_basic/01_print.py
-```
-
-Canvia el camí del fitxer per executar qualsevol altre exemple. Els fitxers que fan servir `input()` esperen que introdueixis dades al terminal. Els notebooks `.ipynb` es poden obrir amb Jupyter Notebook o amb VS Code i l'extensió de Jupyter.
-
-### Obrir els materials amb Jupyter Notebook
-
-Si Jupyter Notebook està en funcionament a `http://localhost:8888`, pots obrir el repositori al navegador i accedir directament a alguns materials:
-
-- [Obrir la carpeta del repositori a Jupyter](http://localhost:8888/tree/OneDrive/Escritorio/UAB/2026-2027/FES/fes-uab-2026)
-- [Obrir l'exemple `01_print.py`](http://localhost:8888/tree/OneDrive/Escritorio/UAB/2026-2027/FES/fes-uab-2026/01_basic/01_print.py)
-- [Obrir el notebook `01_print.ipynb`](http://localhost:8888/notebooks/OneDrive/Escritorio/UAB/2026-2027/FES/fes-uab-2026/01_basic/01_print.ipynb)
-
-Els enllaços són locals: només funcionen quan el servidor Jupyter està iniciat al port `8888` i pot accedir a aquesta ruta del repositori.
+---
 
 ## Ruta d'aprenentatge
 
-### 0. Primer contacte amb Python
-
-Fitxers d'introducció a l'arrel:
-
-- [`exemple.py`](exemple.py): primer programa i sortida per pantalla.
-- [`explicacio_exemple.ipynb`](explicacio_exemple.ipynb): explicació interactiva de l'exemple.
-
-### 1. Conceptes bàsics
-
-Carpeta [`01_basic/`](01_basic/). Presenta els elements necessaris per escriure i executar programes petits:
-
-| Ordre | Fitxer principal | Contingut |
+| Bloc | Carpeta / Fitxers | Continguts principals |
 |---|---|---|
-| 1 | [`01_print.py`](01_basic/01_print.py) | Mostrar informació amb `print()` i treballar amb cadenes de text. |
-| 2 | [`02_types.py`](01_basic/02_types.py) | Tipus de dades bàsics. |
-| 3 | [`03_cast.py`](01_basic/03_cast.py) | Conversió entre tipus de dades. |
-| 4 | [`04_variables.py`](01_basic/04_variables.py) | Variables, assignació, f-strings i convencions de noms. |
-| 5 | [`05_input.py`](01_basic/05_input.py) | Entrada de dades amb `input()` i conversió de valors. |
+| **00. Introducció** | [`00_exemple.py`](00_exemple.py)<br>[`00_explicacio_exemple.ipynb`](00_explicacio_exemple.ipynb) | Primer programa en Python i sortida per consola. |
+| **01. Conceptes bàsics** | [`01_basic/`](01_basic/) | Sortida (`print`), tipus de dades (`types`), conversions (`cast`), variables i entrada d'usuari (`input`). Inclou recopilatori d'exercicis bàsics. |
+| **02. Condicionals** | [`02_condicional_if/`](02_condicional_if/) | Estructures de control `if`, `elif`, `else` i operadors booleans (`and`, `or`, `not`). |
+| **03. Llistes** | [`03_llistes/`](03_llistes/) | Creació, indexació, slicing i mètodes de llista (`append`, `insert`, `remove`, `pop`, `sort`, etc.). |
+| **04. Bucles** | [`04_bucles/`](04_bucles/) | Bucles `while`, `for`, `break`, `continue` i generació de seqüències amb `range()`. |
+| **05. Funcions** | [`05_funcions/`](05_funcions/) | Definició de funcions (`def`), paràmetres, arguments i retorn de valors (`return`). |
+| **06. Diccionaris** | [`06_diccionaris/`](06_diccionaris/) | Estructures clau-valor (`dict`), accés, mètodes i iteració. |
+| **07. Tuples** | [`07_tuples/`](07_tuples/) | Seqüències immutables (`tuple`), accés, propietats i comparativa amb llistes. |
 
-Per practicar, hi ha exercicis i solucions específics per tema, com ara [`01_print_exercicis.py`](01_basic/01_print_exercicis.py) i [`01_print_solucions.py`](01_basic/01_print_solucions.py). També hi ha els fitxers agregats [`exercicis-basics.py`](01_basic/exercicis-basics.py) i [`solucions-basics.py`](01_basic/solucions-basics.py).
+---
 
-### 2. Control del flux i estructures de dades
+## Execució del codi
 
-Carpeta [`02_control_flux/`](02_control_flux/). Practica la presa de decisions i les primeres estructures de dades:
+### Scripts de Python (`.py`)
 
-| Ordre | Fitxer principal | Contingut |
-|---|---|---|
-| 1 | [`01_if.py`](02_control_flux/01_if.py) | Condicionals `if`, `elif` i `else`, operadors lògics i expressions condicionals. |
-| 2 | [`02_booleans.py`](02_control_flux/02_booleans.py) | Valors booleans, comparacions i operadors `and`, `or` i `not`. |
-| 3 | [`03_list.py`](02_control_flux/03_list.py) | Creació de llistes, índexs, slicing i modificació d'elements. |
-| 4 | [`04_list_methods.py`](02_control_flux/04_list_methods.py) | Mètodes de llista per afegir, eliminar, ordenar i consultar elements. |
+Executa qualsevol fitxer des de l'arrel del repositori:
 
-Els exercicis i les solucions estan separats en fitxers com [`01_if_exercicis.py`](02_control_flux/01_if_exercicis.py), [`01_if_solucions.py`](02_control_flux/01_if_solucions.py), [`02_booleans_exercicis.py`](02_control_flux/02_booleans_exercicis.py), [`02_booleans_solucions.py`](02_control_flux/02_booleans_solucions.py), [`03_list_exercicis.py`](02_control_flux/03_list_exercicis.py), [`03_list_solucions.py`](02_control_flux/03_list_solucions.py), [`04_list_methods_exercicis.py`](02_control_flux/04_list_methods_exercicis.py) i [`04_list_methods_solucions.py`](02_control_flux/04_list_methods_solucions.py).
+```bash
+# Windows
+py ./01_basic/01_print.py
 
-### 3. Bucles i altres estructures
+# Linux / macOS
+python3 ./01_basic/01_print.py
+```
 
-Carpeta [`03_bucles/`](03_bucles/). Aplega materials de bucles i altres estructures que permeten organitzar programes:
+### Notebooks interactius (`.ipynb`)
 
-| Ordre | Fitxer principal | Notebook | Exercicis | Solucions | Contingut |
-|---|---|---|---|---|---|
-| 1 | [`01_loop_while.py`](03_bucles/01_loop_while.py) | [`01_loop_while.ipynb`](03_bucles/01_loop_while.ipynb) | [`01_loop_while_exercicis.py`](03_bucles/01_loop_while_exercicis.py) | [`01_loop_while_solucions.py`](03_bucles/01_loop_while_solucions.py) | Bucle while, comptadors, reak, continue, else i validació repetida. |
-| 2 | [`02_loop_for.py`](03_bucles/02_loop_for.py) | [`02_loop_for.ipynb`](03_bucles/02_loop_for.ipynb) | [`02_loop_for_exercicis.py`](03_bucles/02_loop_for_exercicis.py) | [`02_loop_for_solucions.py`](03_bucles/02_loop_for_solucions.py) | Iteració amb or, enumerate(), bucles imbricats i comprensions de llista. |
-| 3 | [`03_range.py`](03_bucles/03_range.py) | [`03_range.ipynb`](03_bucles/03_range.ipynb) | [`03_range_exercicis.py`](03_bucles/03_range_exercicis.py) | [`03_range_solucions.py`](03_bucles/03_range_solucions.py) | Ús de ange() i bucles amb rangs. |
-| 4 | [`04_functions.py`](03_bucles/04_functions.py) | [`04_functions.ipynb`](03_bucles/04_functions.ipynb) | [`04_functions_exercicis.py`](03_bucles/04_functions_exercicis.py) | [`04_functions_solucions.py`](03_bucles/04_functions_solucions.py) | Definició de funcions, paràmetres, arguments i valors de retorn. |
-| 5 | [`05_dictionaries.py`](03_bucles/05_dictionaries.py) | [`05_dictionaries.ipynb`](03_bucles/05_dictionaries.ipynb) | [`05_dictionaries_exercicis.py`](03_bucles/05_dictionaries_exercicis.py) | [`05_dictionaries_solucions.py`](03_bucles/05_dictionaries_solucions.py) | Diccionaris i operacions amb parelles clau-valor. |
-| 6 | [`06_tuplas.py`](03_bucles/06_tuplas.py) | [`06_tuplas.ipynb`](03_bucles/06_tuplas.ipynb) | [`06_tuplas_exercicis.py`](03_bucles/06_tuplas_exercicis.py) | [`06_tuplas_solucions.py`](03_bucles/06_tuplas_solucions.py) | Tuples, accés als elements, immutabilitat i mètodes disponibles. |
+Els fitxers `.ipynb` es poden obrir directament a **VS Code** (recomanat, amb l'extensió oficial de Jupyter) o bé executant Jupyter Notebook al terminal:
 
-## Organització i noms dels fitxers
+```bash
+jupyter notebook
+```
 
-En general, els fitxers segueixen aquests patrons:
+---
 
-- `NN_tema.py`: exemples i contingut principal del tema.
-- `NN_tema_exercicis.py`: enunciats per practicar sense solucions.
-- `NN_tema_solucions.py`: solucions dels exercicis.
+## Metodologia de treball recomanada
 
-La convenció encara no és uniforme a tot el repositori. En alguns temes, els exercicis apareixen comentats al fitxer principal o s'agrupen en un únic fitxer. Fes servir l'índex de cada carpeta i aquesta guia com a orientació; els fitxers disponibles són la referència definitiva.
+1. **Explorar**: Llegeix i executa el fitxer d'exemples (`.py` o `.ipynb`).
+2. **Experimentar**: Modifica valors i prediu el comportament abans d'executar.
+3. **Practicar**: Resol el fitxer `_exercicis.py` de manera autònoma.
+4. **Validar**: Compara el teu resultat amb `_solucions.py` i analitza possibles alternatives.
 
-## Àmbit de l'assignatura
-
-La ruta actual comença amb els conceptes bàsics de Python, continua amb condicionals i estructures de dades, i introdueix bucles, funcions, diccionaris i tuples. Aquests fonaments permeten avançar cap a la resolució algorítmica de problemes i l'aplicació de la programació a contextos d'enginyeria, electrònica, sistemes i telecomunicacions.
-
-El repositori és complementari a les explicacions i activitats de classe: no substitueix les indicacions del professorat sobre el calendari, els lliuraments o els continguts avaluables.

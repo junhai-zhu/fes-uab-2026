@@ -3,9 +3,6 @@
 # Permeten executar un bloc de codi repetidament mentre es compleixi una condició
 ###
 
-import os
-os.system("cls") # neteja la pantalla
-
 # print("\n Bucle while:")
 
 # Bucle amb una condició simple
@@ -61,15 +58,15 @@ os.system("cls") # neteja la pantalla
 
 # comptador = 0
 # while comptador < 5:
-#     print(f"El comptador és {comptador}")
+#     print(f"El comptador = {comptador}")
 #     comptador += 1
 # else:
 #     print("El bucle while ha acabat de forma natural.")
-#     print(f"El valor final del comptador és {comptador}.")
+#     print(f"El valor final del comptador = {comptador}.")
 
 # numero = 0
 # while numero < 10:
-#     print(f"El número és {numero}")
+#     print(f"El nombre = {numero}")
 #     if numero == 3:
 #         print("Hem arribat al 3! Trencant el bucle.")
 #         break  # Interromp el bucle
@@ -77,7 +74,7 @@ os.system("cls") # neteja la pantalla
 # else:
 #     print("Aquest missatge no s'imprimirà perquè el bucle ha estat interromput per 'break'.")
 
-# print("El programa ha continuat després del bucle.")
+# print("El programa ha continuat despres del bucle.")
 
 # Sortida esperada:
 # El número és 0
@@ -98,13 +95,13 @@ os.system("cls") # neteja la pantalla
 
 # demanar a l'usuari un número que ha
 # de ser positiu, si no, no el deixem en pau
-# numero = -1
-# while numero < 0:
-#   numero = int(input("Escriu un número positiu: "))
-#   if numero < 0:
-#     print("El número ha de ser positiu. Torna-ho a provar.")
+numero = -1
+while numero < 0:
+  numero = int(input("Escriu un número positiu: "))
+  if numero < 0:
+    print("El número ha de ser positiu. Torna-ho a provar.")
 
-# print(f"El número que has introduït és {numero}")
+print(f"El número que has introduït és {numero}")
 
 # numero = -1
 # while numero < 0:
