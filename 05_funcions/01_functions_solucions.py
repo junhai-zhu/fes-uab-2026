@@ -76,3 +76,42 @@ def maxim(numeros):
 
 print(f"El factorial de 5 és {factorial(5)}")  # 120
 print(f"El màxim és {maxim([15, 5, 25, 10, 20])}")  # 25
+
+# Exercici 8: Comptar vocals
+print("\nExercici 8:")
+def comptar_vocals(text):
+  vocals = "aeiouàèéíòóúïü"
+  comptador = 0
+  for lletra in text.lower():
+    if lletra in vocals:
+      comptador += 1
+  return comptador
+
+print(f"Vocals a 'Hola Món': {comptar_vocals('Hola Món')}")  # 3
+print(f"Vocals a 'Enginyeria': {comptar_vocals('Enginyeria')}")  # 5
+
+# Exercici 9: Retorn múltiple (mínim i màxim)
+print("\nExercici 9:")
+def minim_i_maxim(numeros):
+  min_val = numeros[0]
+  max_val = numeros[0]
+  for numero in numeros[1:]:
+    if numero < min_val:
+      min_val = numero
+    if numero > max_val:
+      max_val = numero
+  return min_val, max_val
+
+val_min, val_max = minim_i_maxim([15, 3, 42, 8, 23, 4])
+print(f"El mínim és {val_min} i el màxim és {val_max}")  # mínim 3, màxim 42
+
+# Exercici 10: Palíndrom
+print("\nExercici 10:")
+def es_palindrom(text):
+  text_net = text.lower()
+  return text_net == text_net[::-1]
+
+print(es_palindrom("radar"))  # True
+print(es_palindrom("Anna"))   # True
+print(es_palindrom("Python")) # False
+

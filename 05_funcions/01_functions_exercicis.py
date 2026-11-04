@@ -28,3 +28,16 @@
 # Exercici 7: Reconvertir exercicis anteriors
 # Torna a l'exercici del factorial (while) i del màxim d'una llista (for)
 # i converteix-los en funcions que retornin el resultat.
+
+# Exercici 8: Comptar vocals
+# Crea una funció comptar_vocals(text) que rebi una cadena de text i retorni quantes vocals
+# (a, e, i, o, u) conté. Ha de funcionar tant amb majúscules com amb minúscules.
+
+# Exercici 9: Retorn múltiple (mínim i màxim)
+# Crea una funció minim_i_maxim(numeros) que rebi una llista de números i retorni tant el valor
+# mínim com el valor màxim alhora. Desempaqueta el resultat en dues variables.
+
+# Exercici 10: Palíndrom
+# Crea una funció es_palindrom(text) que retorni True si una paraula es llegeix igual d'esquerra a dreta
+# que de dreta a esquerra (ignorant majúscules i minúscules), i False en cas contrari.
+

@@ -3,8 +3,9 @@
 # Permeten executar un bloc de codi repetidament mentre ITERA un iterable o una llista
 ###
 
-import os
-os.system("cls")  # Neteja la pantalla del terminal
+import sys
+sys.stdout.reconfigure(encoding="utf-8")
+
 
 print("\nBucle for:")
 
@@ -19,9 +20,11 @@ print("\nBucle for:")
 #   print(caracter)
 
 # enumerate()
-# fruites = ["poma", "pera", "mandarina"]
-# for idx, valor in enumerate(fruites):
-#   print(f"L'Ã­ndex Ã©s {idx} i la fruita Ã©s {valor}")
+
+fruites = ["poma", "pera", "mandarina"]
+for idx, valor in enumerate(fruites):
+  print(f"L'índex és {idx} i la fruita és {valor}")
+# Mostra l'índex i el valor de cada element de la llista fruites
 
 # bucles imbricats
 # lletres = ["A", "B", "C"]
@@ -36,26 +39,26 @@ print("\nBucle for:")
 
 # break
 # print("\nbreak:")
-# animals = ["gos", "gat", "ratolÃ­", "lloro", "peix", "canari"]
+# animals = ["gos", "gat", "ratolí", "lloro", "peix", "canari"]
 # for idx, animal in enumerate(animals):
 #   print(animal)
 #   if animal == "lloro":
-#     print(f"El lloro estÃ  amagat a l'Ã­ndex {idx}")
+#     print(f"El lloro est? amagat a l'índex {idx}")
 #     break
 
 # continue
 # print("\ncontinue:")
-# animals = ["gos", "gat", "ratolÃ­", "lloro", "peix", "canari"]
+# animals = ["gos", "gat", "ratolí", "lloro", "peix", "canari"]
 # for idx, animal in enumerate(animals):
 #   if animal == "lloro": continue
 #   print(animal)
 
-# ComprensiÃ³ de llistes (list comprehension)
-# animals = ["gos", "gat", "ratolÃ­", "lloro", "peix", "canari"]
+# Comprensió de llistes (list comprehension)
+# animals = ["gos", "gat", "ratolí", "lloro", "peix", "canari"]
 # animals_majus = [animal.upper() for animal in animals]
 # print(animals_majus)
 
-# Mostra els nÃºmeros parells d'una llista
+# Mostra els números parells d'una llista
 # parells = [num for num in [1, 2, 3, 4, 5, 6] if num % 2 == 0]
 # print(parells)
 
@@ -63,32 +66,32 @@ print("\nBucle for:")
 # EXERCICIS (for)
 ###
 
-# Exercici 1: Imprimir nÃºmeros parells
-# Imprimeix tots els nÃºmeros parells del 2 al 20 (inclosos) fent servir un bucle for.
+# Exercici 1: Imprimir números parells
+# Imprimeix tots els números parells del 2 al 20 (inclosos) fent servir un bucle for.
 # print("\nExercici 1:")
 
 # Exercici 2: Calcular la mitjana d'una llista
-# Donada la llista de nÃºmeros segÃ¼ent:
+# Donada la llista de números següent:
 # numeros = [10, 20, 30, 40, 50]
-# Calcula la mitjana dels nÃºmeros fent servir un bucle for.
+# Calcula la mitjana dels números fent servir un bucle for.
 # print("\nExercici 2:")
 
-# Exercici 3: Buscar el mÃ xim d'una llista
-# Donada la llista de nÃºmeros segÃ¼ent:
+# Exercici 3: Buscar el m?xim d'una llista
+# Donada la llista de números següent:
 # numeros = [15, 5, 25, 10, 20]
-# Troba el nÃºmero mÃ xim de la llista fent servir un bucle for.
+# Troba el número m?xim de la llista fent servir un bucle for.
 # print("\nExercici 3:")
 
 # Exercici 4: Filtrar cadenes per longitud
-# Donada la llista de paraules segÃ¼ent:
+# Donada la llista de paraules següent:
 # paraules = ["casa", "arbre", "sol", "elefant", "lluna"]
-# Crea una llista nova que contingui nomÃ©s les paraules amb mÃ©s de 5 lletres
+# Crea una llista nova que contingui només les paraules amb més de 5 lletres
 # fent servir un bucle for i list comprehension.
 # print("\nExercici 4:")
 
 # Exercici 5: Comptar paraules que comencen per una lletra
-# Donada la llista de paraules segÃ¼ent:
+# Donada la llista de paraules següent:
 # paraules = ["casa", "arbre", "sol", "elefant", "lluna", "cotxe"]
 # Demana a l'usuari que introdueixi una lletra.
-# Compta quantes paraules de la llista comencen per aquesta lletra (sense diferenciar majÃºscules/minÃºscules).
+# Compta quantes paraules de la llista comencen per aquesta lletra (sense diferenciar majúscules/minúscules).
 # print("\nExercici 5:")
